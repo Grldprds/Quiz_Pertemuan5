@@ -74,17 +74,14 @@
     <script>
     function tampilHasil()
     {
-      // Mendapatkan nilai dari elemen-elemen formulir
     var nama = document.getElementById("nama").value;
     var alamat = document.getElementById("alamatPemesan").value;
     var jenisKopi = document.getElementById("jenisKopi").value;
 
-    // Mendapatkan nilai dari checkbox makanan pelengkap
     var cakeChecked = document.getElementById("makananPelengkap1").checked;
     var browniesChecked = document.getElementById("makananPelengkap2").checked;
     var dalgonaCandyChecked = document.getElementById("makananPelengkap3").checked;
 
-    // Menghitung total harga berdasarkan jenis kopi
     var hargaKopi = 0;
     if (jenisKopi === "kopiarabika") {
         hargaKopi = 10000;
@@ -96,7 +93,6 @@
         hargaKopi = 25000;
     }
 
-    // Menghitung total harga berdasarkan makanan pelengkap yang dipilih
     var hargaMakananPelengkap = 0;
     if (cakeChecked) {
         hargaMakananPelengkap += 5000;
@@ -108,10 +104,8 @@
         hargaMakananPelengkap += 15000;
     }
 
-    // Menghitung total harga
     var totalHarga = hargaKopi + hargaMakananPelengkap;
 
-    // Menampilkan hasil pada elemen dengan id "hasil"
     var hasilElement = document.getElementById("hasil");
     hasilElement.innerHTML = "<p><strong>Ketentuan</strong></p><p>=====================</p>" +
         "<p><strong>Harga Kopi</strong></p><p>=====================</p>" +
